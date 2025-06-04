@@ -11,3 +11,4 @@ def generate_alert(intrusion_details):
     # Optionally, log to a file
     with open("ids_alerts.log", "a") as log_file:
         log_file.write(alert_message + "\n")
+

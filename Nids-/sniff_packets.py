@@ -11,10 +11,9 @@ def packet_callback(packet):
         print(f"[{ts}] {protocol} {src} -> {dst} | Size: {len(packet)} bytes")
 
 def start_sniffing(interface=None):
-    print("[*] Sniffing started... Press CTRL+C to stop.")
+    print("Sniffing started... CTRL+C to stop.")
     sniff(iface=interface, prn=packet_callback, store=False)
 
 if __name__ == "__main__":
-    start_sniffing()
-
+    start_sniffing("en0")  # on Mac, 'en0' is usually the Wi-Fi interface
 
